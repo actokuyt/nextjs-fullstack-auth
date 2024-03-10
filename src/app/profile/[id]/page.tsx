@@ -1,5 +1,6 @@
 "use client";
 
+import { lusitana } from "@/app/fonts";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -28,11 +29,8 @@ export default function UserProfile({ params }: any) {
     fetchId();
   }, []);
 
-  console.log(userData);
-  console.log(isVerified);
-
   return (
-    <div className="min-h-screen py-2  md:w-2/3 mx-auto lg:w-2/5 mx-auto">
+    <div className= {`${lusitana.className} min-h-screen py-2  md:w-2/3 mx-auto lg:w-2/5 mx-auto`} >
       <h1 className="text-2xl text-center ">Profile</h1>
       {userData && (
         <div className="p-2">

@@ -5,6 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
+import { lusitana } from "../fonts";
 
 export default function WelcomePage() {
   const router = useRouter();
@@ -16,7 +17,6 @@ export default function WelcomePage() {
       toast.success("Logout successful");
       router.push("/login");
     } catch (error: any) {
-      console.log(error.message);
       toast.error(error.message);
     }
   };
@@ -34,7 +34,7 @@ export default function WelcomePage() {
   }, []);
 
   return (
-    <div className=" min-h-screen py-2  md:w-2/3 mx-auto lg:w-2/5 mx-auto">
+    <div className= {`${lusitana.className} min-h-screen py-2  md:w-2/3 mx-auto lg:w-2/5 mx-auto`}>
       <h1 className="text-2xl text-center ">Welcome!</h1>
       <p className="p-2">
         If you're seeing this screen you're among the choosen ones

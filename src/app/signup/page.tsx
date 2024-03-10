@@ -15,18 +15,16 @@ export default function SignupPage() {
     password: "",
     username: "",
   });
-  const [buttonDisabled, setButtonDisabled] = React.useState(false);
+  const [buttonDisabled, setButtonDisabled] = React.useState(true);
   const [loading, setLoading] = React.useState("SignUp");
 
   const onSignup = async () => {
     try {
       setLoading("Processing");
       const response = await axios.post("/api/users/signup", user);
-      console.log("Signup success", response.data);
       toast.success("Account Created Successfully");
       router.push("/verifyemail");
     } catch (error: any) {
-      console.log("Signup failed", error.response.data);
       toast.error(error.response.data.error);
     } finally {
       setLoading("SignUp");
@@ -95,6 +93,7 @@ export default function SignupPage() {
         </button>
       </div>
 
+      <span>Already have an account?</span>
       <Link href="/login">Visit login page</Link>
       <Toaster />
     </div>

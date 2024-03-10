@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 import { lusitana } from "@/app/fonts";
 
 export default function VerifyEmailPage() {
-    const router = useRouter()
+  const router = useRouter()
   const [text, setText] = useState(
     "Please click the link in the email we sent to you to verify your email. "
   );
@@ -18,18 +18,15 @@ export default function VerifyEmailPage() {
   const verifyUserEmail = async () => {
     try {
       const response = await axios.post("/api/users/verifyemail", { token });
-      console.log(response);
       setText(response.data.email);
       setVerified(true);
       router.push("/login")
     } catch (error: any) {
       setError(true);
-      console.log(error.reponse.data);
     }
   };
 
   useEffect(() => {
-    console.log(window.location.search.split("="));
     const urlToken = window.location.search.split("=")[1];
     setToken(urlToken || "");
   }, []);
