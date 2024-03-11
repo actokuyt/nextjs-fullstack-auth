@@ -150,7 +150,7 @@ export default function forgotPasswordPage() {
             </button>
           </div>
         </div>
-      )}
+      )} 
 
       {error && (
         <div
