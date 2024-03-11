@@ -37,7 +37,7 @@ export default function WelcomePage() {
     <div className= {`${lusitana.className} min-h-screen py-2  md:w-2/3 mx-auto lg:w-2/5 mx-auto`}>
       <h1 className="text-2xl text-center ">Welcome!</h1>
       <p className="p-2">
-        If you're seeing this screen you're among the choosen ones
+        If you&apos;re seeing this screen you&apos;re among the choosen ones
       </p>
       <Link
         className="text-center block w-2/5 mx-auto bg-blue-500 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"

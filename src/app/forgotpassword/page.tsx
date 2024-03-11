@@ -58,7 +58,7 @@ export default function ForgotPasswordPage() {
     } else {
       setButtonDisabled(true);
     }
-  });
+  }, [email.length, password.length]);
 
   useEffect(() => {
     const urlToken = window.location.search.split("=")[1];
@@ -83,9 +83,9 @@ export default function ForgotPasswordPage() {
       {!isPasswordChanged && (
         <div>
           <div className="flex flex-col items-center justify-center py-2 m-2">
-            <h1 className="text-xl">Can't remember your password?</h1>
+            <h1 className="text-xl">Can&apos;t remember your password?</h1>
             <p className="text-center">
-              That's very silly of you, but luckily I can help you if you can
+              That&apos;s very silly of you, but luckily I can help you if you can
               atleast provide your email.
             </p>
           </div>
@@ -121,7 +121,7 @@ export default function ForgotPasswordPage() {
           <div className="flex flex-col items-center justify-center py-2 m-2">
             <h1 className="text-xl">A Clean Slate</h1>
             <p className="text-center">
-              You've been offered a new opportunity to set your password,
+              You&apos;ve been offered a new opportunity to set your password,
               please remember to use a simple password you can remember.
             </p>
           </div>

@@ -83,7 +83,7 @@ export default function LoginPage() {
         </button>
       </div>
 
-      <span>Don't have an Account yet?</span>
+      <span>Don&apos;t have an Account yet?</span>
       <Link href="/signup">Visit Signup Page</Link>
       <Toaster />
     </div>

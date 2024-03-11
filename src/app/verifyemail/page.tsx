@@ -35,7 +35,7 @@ export default function VerifyEmailPage() {
     if (token.length > 0) {
       verifyUserEmail();
     }
-  }, [token]);
+  }, [token, verifyUserEmail()]);
 
   return (
     <div>
